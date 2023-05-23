@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { renderMap } from './renderMap'
-import { renderGate } from './renderGate'
-import { renderSeats } from './renderSeats'
-import { getCheckIn } from './getCheckIn'
 import Modal from './Modal'
+import { getCheckIn } from './getCheckIn'
+import { renderAreaAndGate } from './renderAreaAndGate'
+import { renderMap } from './renderMap'
+import { renderSeats } from './renderSeats'
 
 const initialRenderMap = async () => {
   try {
     await renderMap()
-    await renderGate()
+    await renderAreaAndGate()
     await renderSeats()
   } catch (err) {
     console.error(err)
@@ -38,7 +38,7 @@ const Map = () => {
             const targetDiv = document.querySelector(`div[name="${item}"]`);
 
             if (targetDiv) {
-              targetDiv.style.backgroundColor = 'red';
+              targetDiv.style.backgroundColor = '#42ba96';
               targetDiv.classList.add('cursor-pointer');
               targetDiv.onclick = () => {
                 setIsShowModal(true)
@@ -54,6 +54,15 @@ const Map = () => {
       renderCheckIn()
     }
   }, [isInitial])
+
+  // useEffect(() => {
+  //   const divRoot = document.getElementById('root');
+  //   if (isShowModal) {
+  //     divRoot.style.overflow = 'hidden';
+  //   } else {
+  //     divRoot.style.overflow = 'unset';
+  //   }
+  // }, [isShowModal])
 
   return (
     <>

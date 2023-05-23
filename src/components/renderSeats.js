@@ -55,6 +55,35 @@ const colorByCode = (code) => {
   }
 }
 
+const renderFestivalSeat = () => {
+  const divBoxItem = document.getElementById('item-1');
+  const boxWidth = divBoxItem.getBoundingClientRect().width;
+  const boxHeight = divBoxItem.getBoundingClientRect().height;
+
+  const mainGrid = document.getElementById("main-grid");
+  mainGrid.style.position = 'relative';
+
+  const areaRow = 10;
+  const areaCol = 47;
+  const areaOffsetRow = 20;
+  const areaOffsetCol = 41;
+
+  const div = document.createElement('div');
+  const p = document.createElement('p');
+  div.style.position = 'absolute';
+  div.style.top = `${boxHeight * areaRow}px`;
+  div.style.left = `${boxWidth * areaCol}px`;
+  div.style.height = `${boxHeight * areaOffsetRow}px`;
+  div.style.width = `${boxHeight * areaOffsetCol}px`;
+  div.classList.add('bg-black', 'border', 'border-black', 'flex', 'items-center', 'justify-center')
+
+  p.innerText = `FESTIVAL`;
+  p.classList.add('font-semibold', 'text-lg', 'px-6', 'py-2', 'text-white', 'w-fit');
+
+  div.appendChild(p);
+  mainGrid.appendChild(div);
+}
+
 const renderListSeat = (startDiv, data, horizontal, vertical, bgColor, textColor, isHorizontal) => {
   for (let i = 0; i < horizontal; i++) {
     // horizontal
@@ -90,6 +119,8 @@ const renderListSeat = (startDiv, data, horizontal, vertical, bgColor, textColor
     for (let j = 1; j < vertical; j++) {
       const currentDivIndexVertical = startDiv + (i % horizontal) + (j * COLUMN_AMOUNT);
       const currentDivVertical = document.getElementById(`item-${currentDivIndexVertical}`);
+
+      if (!currentDivVertical) return console.log(currentDivIndexVertical);
 
       currentDivVertical.style.backgroundColor = bgColor;
       currentDivVertical.style.color = textColor;
@@ -235,4 +266,6 @@ export const renderSeats = async () => {
     const boxId = getItemId(rowNumber, colNumber);
     boxSection(item, boxId);
   })
+
+  renderFestivalSeat()
 }
