@@ -25,6 +25,10 @@
   /* color: antiquewhite; */
 }
 
+.isCheckIn {
+  background-color: #42ba96 !important;
+}
+
 .space {
   border: 0.5px solid #000000 !important;
 }
@@ -88,3 +92,33 @@
     transform: rotate(360deg);
   }
 } 
+
+.refresh-checkin {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color:#ffc82b #0000 #0000008a #0000;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.refresh-checkin:before , .refresh-checkin:after{
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  border: 10px solid transparent;
+  border-bottom-color:#0000008a;
+  transform: translate(-10px, 19px) rotate(-35deg);
+}
+.refresh-checkin:after {
+  border-color: #ffc82b #0000 #0000 #0000 ;
+  transform: translate(32px, 3px) rotate(-35deg);
+}
+.refresh-checkin-load {
+  animation: 1s rotate linear infinite;
+}
+ @keyframes rotate {
+  100%{    transform: rotate(360deg)}
+}

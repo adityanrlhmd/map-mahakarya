@@ -1,4 +1,3 @@
-import dummy from '../data/dummy.json'
 import coordianteSeats from '../data/coordinat-seat.json'
 import { COLUMN_AMOUNT } from '../helpers/boxAmount';
 
@@ -111,7 +110,7 @@ const renderListSeat = (startDiv, data, horizontal, vertical, bgColor, textColor
 
     currentDiv.style.backgroundColor = bgColor;
     currentDiv.style.color = textColor;
-    currentDiv.classList.add('!border', "!border-black")
+    currentDiv.classList.add('boxSeat', '!border', "!border-black", 'cursor-pointer')
     currentDiv.innerText = data[i].number;
     currentDiv.setAttribute('name', data[i].seat_code);
 
@@ -124,7 +123,7 @@ const renderListSeat = (startDiv, data, horizontal, vertical, bgColor, textColor
 
       currentDivVertical.style.backgroundColor = bgColor;
       currentDivVertical.style.color = textColor;
-      currentDivVertical.classList.add('!border', "!border-black")
+      currentDivVertical.classList.add('boxSeat', '!border', "!border-black", 'cursor-pointer')
       currentDivVertical.innerText = data[j].number;
       currentDivVertical.setAttribute('name', data[j].seat_code);
     }
@@ -174,6 +173,7 @@ const splitCode = (seatClass, seatCode) => {
     const listCode = seatCode.match(/(\D+)(\d+)(\D+\d*)/);
 
     const codeAndRow = listCode[1];
+
     const code = codeAndRow.slice(0, -1);
     const row = codeAndRow.slice(-1);
 
@@ -210,10 +210,12 @@ function createSeatObjects(seats) {
   let codeObjects = [];
 
   seats.forEach(seat => {
-    const { seatObject, newCode } = splitCode(seat.seat_class, seat.seat_code);
+    if (!['DIP', 'EX'].includes(seat.seat_class_code)) {
+      const { seatObject, newCode } = splitCode(seat.seat_class, seat.seat_code);
 
-    seatObjects.push(seatObject);
-    codeObjects.push(newCode)
+      seatObjects.push(seatObject);
+      codeObjects.push(newCode)
+    }
   });
 
   let filteredCodeObjects = codeObjects.filter((elem, index, self) =>
@@ -224,9 +226,16 @@ function createSeatObjects(seats) {
 }
 
 export const renderSeats = async () => {
+  const fetchSeats = await fetch(`${import.meta.env.VITE_API_URL}/seat-class/51-tahun-kerajaan-cinta-ahmad-dhani`, {
+    headers: {
+      'api-key': import.meta.env.VITE_API_KEY
+    }
+  });
+  const dataSeats = await fetchSeats.json();
+
   const coordinat = coordianteSeats;
 
-  const { seatObjects, codeObjects } = createSeatObjects(dummy);
+  const { seatObjects, codeObjects } = createSeatObjects(dataSeats.data);
 
   const filterSeat = codeObjects.map(item => {
     return seatObjects.filter(seat => seat.code === item.code && seat.row === item.row && seat.wingAndGt === item.wingAndGt);

@@ -11,12 +11,12 @@ async function getDetail(seatCode) {
   return res
 }
 
-const Modal = ({ seatCode, setIsShowModal }) => {
+const Modal = ({ seatCode, setIsShowModal, isCheckIn }) => {
   const [dataDetail, setDataDetail] = useState(null);
   const [isLoadData, setIsLoadData] = useState(false);
 
   useEffect(() => {
-    if (seatCode) {
+    if (seatCode && isCheckIn) {
       setIsLoadData(true)
       getDetail(seatCode)
         .then(data => {
@@ -25,7 +25,7 @@ const Modal = ({ seatCode, setIsShowModal }) => {
         .catch((err) => console.error(err))
         .finally(() => setIsLoadData(false))
     }
-  }, [])
+  }, [isCheckIn])
 
   return (
     <>
@@ -52,37 +52,42 @@ const Modal = ({ seatCode, setIsShowModal }) => {
             &times;
           </span>
 
-          <h1 className='mb-3 text-lg font-semibold'>
+          <h1 className={`text-lg font-semibold ${isCheckIn ? 'mb-3' : 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'}`}>
             {seatCode}
           </h1>
 
           {
-            isLoadData ?
-              <div className='flex items-center justify-center grow'>
-                <span className='loader'></span>
-              </div> :
-              <div className='flex flex-col items-center justify-center gap-2'>
-                <div className='flex flex-col items-center justify-center'>
-                  <h4 className='text-sm text-center'>Name</h4>
-                  <p className='text-center font-semibol'>
-                    {dataDetail?.first_name}
-                  </p>
-                </div>
+            isCheckIn &&
+            <>
+              {
+                isLoadData ?
+                  <div className='flex items-center justify-center grow'>
+                    <span className='loader'></span>
+                  </div> :
+                  <div className='flex flex-col items-center justify-center gap-2'>
+                    <div className='flex flex-col items-center justify-center'>
+                      <h4 className='text-sm text-center'>Name</h4>
+                      <p className='text-center font-semibol'>
+                        {dataDetail?.first_name}
+                      </p>
+                    </div>
 
-                <div className='flex flex-col items-center justify-center'>
-                  <h4 className='text-sm text-center'>Phone</h4>
-                  <p className='text-center font-semibol'>
-                    {dataDetail?.phone_number}
-                  </p>
-                </div>
+                    <div className='flex flex-col items-center justify-center'>
+                      <h4 className='text-sm text-center'>Phone</h4>
+                      <p className='text-center font-semibol'>
+                        {dataDetail?.phone_number}
+                      </p>
+                    </div>
 
-                <div className='flex flex-col items-center justify-center'>
-                  <h4 className='text-sm text-center'>Email</h4>
-                  <p className='text-center font-semibol'>
-                    {dataDetail?.email}
-                  </p>
-                </div>
-              </div>
+                    <div className='flex flex-col items-center justify-center'>
+                      <h4 className='text-sm text-center'>Email</h4>
+                      <p className='text-center font-semibol'>
+                        {dataDetail?.email}
+                      </p>
+                    </div>
+                  </div>
+              }
+            </>
           }
         </div>
       </div>
