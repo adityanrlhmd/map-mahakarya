@@ -4,6 +4,7 @@ import { getCheckIn } from './getCheckIn'
 import { renderAreaAndGate } from './renderAreaAndGate'
 import { renderMap } from './renderMap'
 import { renderSeats } from './renderSeats'
+import dummyCheckin from '../data/checkin.json'
 
 const initialRenderMap = async () => {
   try {
@@ -55,15 +56,6 @@ const Map = () => {
     }
   }, [isInitial])
 
-  // useEffect(() => {
-  //   const divRoot = document.getElementById('root');
-  //   if (isShowModal) {
-  //     divRoot.style.overflow = 'hidden';
-  //   } else {
-  //     divRoot.style.overflow = 'unset';
-  //   }
-  // }, [isShowModal])
-
   return (
     <>
       {
@@ -74,7 +66,10 @@ const Map = () => {
           setIsShowModal={setIsShowModal}
         />
       }
-      <div id='main-grid' className='main-grid'>
+
+      <div className='overflow-auto'>
+        <div id='main-grid' className='main-grid'>
+        </div>
       </div>
     </>
   )
