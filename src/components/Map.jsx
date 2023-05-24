@@ -17,71 +17,76 @@ const initialRenderMap = async () => {
 
 const Map = () => {
   const [isInitial, setIsInitial] = useState(false);
-  const [isRefreshCheckIn, setIsRefreshCheckIn] = useState(false);
+  const [isLoadCheckIn, setIsLoadCheckIn] = useState(true);
   const [isAfterGetCheckin, setIsAfterGetCheckin] = useState(false);
 
   const [seatCode, setSeatCode] = useState('');
   const [isShowModal, setIsShowModal] = useState(false);
   const [isCheckIn, setIsCheckIn] = useState(false);
 
+  const renderClickBox = () => {
+    const boxSeats = document.querySelectorAll(`.boxSeat`);
+
+    boxSeats.forEach(item => {
+      const name = item.getAttribute('name');
+      const isCheckIn = item.getAttribute('ischeckin');
+
+      const openBoxDetail = (isCheckIn) => {
+        setSeatCode(name)
+        setIsShowModal(true)
+        setIsCheckIn(isCheckIn)
+      }
+
+      item.onclick = () => {
+        openBoxDetail(isCheckIn)
+      }
+    })
+  }
+
+  const renderCheckIn = async () => {
+    try {
+      setIsLoadCheckIn(true)
+      const dataCheckin = await getCheckIn();
+
+      dataCheckin.map(item => {
+        const targetDiv = document.querySelector(`div[name="${item}"]`);
+
+        if (targetDiv) {
+          targetDiv.setAttribute('isCheckIn', true);
+          targetDiv.classList.add('isCheckIn');
+        }
+      })
+
+      setIsLoadCheckIn(false)
+
+      renderClickBox()
+    } catch (err) {
+      setIsLoadCheckIn(false)
+      console.error(err)
+    }
+  }
+
   useEffect(() => {
     if (!isInitial) {
       initialRenderMap()
-        .finally(() => setIsInitial(true))
+        .finally(() => {
+          renderCheckIn()
+            .finally(() => {
+              setIsInitial(true)
+            })
+        })
     }
   }, [])
 
   useEffect(() => {
-    if (isInitial && !isRefreshCheckIn) {
-      const renderCheckIn = async () => {
-        try {
-          const dataCheckin = await getCheckIn();
+    if (isInitial) {
+      const interval = setInterval(() => {
+        renderCheckIn()
+      }, 5000);
 
-          dataCheckin.map(item => {
-            const targetDiv = document.querySelector(`div[name="${item}"]`);
-
-            if (targetDiv) {
-              targetDiv.setAttribute('isCheckIn', true);
-              targetDiv.classList.add('isCheckIn');
-            }
-          })
-
-          setIsAfterGetCheckin(true)
-          setIsRefreshCheckIn(true)
-        } catch (err) {
-          console.error(err)
-        }
-      }
-
-      renderCheckIn()
+      return () => clearInterval(interval);
     }
-  }, [isInitial, isRefreshCheckIn])
-
-  useEffect(() => {
-    if (isInitial && isAfterGetCheckin) {
-      const boxSeats = document.querySelectorAll(`.boxSeat`);
-
-      boxSeats.forEach(item => {
-        const name = item.getAttribute('name');
-        const isCheckIn = item.getAttribute('ischeckin');
-
-        const openBoxDetail = (isCheckIn) => {
-          setSeatCode(name)
-          setIsShowModal(true)
-          setIsCheckIn(isCheckIn)
-        }
-
-        item.onclick = () => {
-          openBoxDetail(isCheckIn)
-        }
-      })
-    }
-  }, [isInitial, isAfterGetCheckin])
-
-  const refreshCheckIn = () => {
-    setIsAfterGetCheckin(false);
-    setIsRefreshCheckIn(false);
-  }
+  }, [isInitial])
 
   return (
     <>
@@ -97,15 +102,15 @@ const Map = () => {
 
       <button
         type='button'
-        onClick={refreshCheckIn}
-        disabled={!isRefreshCheckIn}
+        onClick={renderCheckIn}
+        disabled={isLoadCheckIn}
         className='fixed z-10 px-4 py-2 bg-white border border-gray-400 rounded-lg bottom-6 right-7 disabled:bg-gray-400'
       >
         Refresh
         {/* <span className={`refresh-checkin ${!isRefreshCheckIn && 'refresh-checkin-load'}`}></span> */}
       </button>
 
-      <div className='overflow-auto'>
+      <div className='overflow-x-scroll overflow-y-scroll'>
         <div id='main-grid' className='main-grid'>
         </div>
       </div>
