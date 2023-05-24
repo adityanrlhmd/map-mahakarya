@@ -91,16 +91,68 @@
     }
   },
   {
-    "area": "MIGT10&GT11",
+    "area": "LE",
     "row": 93,
     "col": 44,
     "offsetRow": 21,
-    "offsetCol": 46,
+    "offsetCol": 10,
+    "directionName": {
+      "top": "unset",
+      "left": "43%",
+      "right": "50%",
+      "bottom": "-50px"
+    }
+  },
+  {
+    "area": "MI",
+    "row": 93,
+    "col": 56,
+    "offsetRow": 21,
+    "offsetCol": 26,
     "directionName": {
       "top": "unset",
       "left": "43%",
       "right": "50%",
       "bottom": 0
+    }
+  },
+  {
+    "area": "RI",
+    "row": 93,
+    "col": 86,
+    "offsetRow": 21,
+    "offsetCol": 10,
+    "directionName": {
+      "top": "unset",
+      "left": "43%",
+      "right": "50%",
+      "bottom": "-50px"
+    }
+  },
+  {
+    "area": "LE",
+    "row": 39,
+    "col": 45,
+    "offsetRow": 40,
+    "offsetCol": 19,
+    "directionName": {
+      "top": "unset",
+      "left": "43%",
+      "right": "50%",
+      "bottom": "-50px"
+    }
+  },
+  {
+    "area": "RI",
+    "row": 39,
+    "col": 76,
+    "offsetRow": 40,
+    "offsetCol": 19,
+    "directionName": {
+      "top": "unset",
+      "left": "43%",
+      "right": "50%",
+      "bottom": "-50px"
     }
   }
 ]

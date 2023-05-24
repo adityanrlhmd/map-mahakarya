@@ -18,7 +18,6 @@ const initialRenderMap = async () => {
 const Map = () => {
   const [isInitial, setIsInitial] = useState(false);
   const [isLoadCheckIn, setIsLoadCheckIn] = useState(true);
-  const [isAfterGetCheckin, setIsAfterGetCheckin] = useState(false);
 
   const [seatCode, setSeatCode] = useState('');
   const [isShowModal, setIsShowModal] = useState(false);

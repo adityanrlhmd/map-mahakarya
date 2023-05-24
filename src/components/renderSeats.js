@@ -11,6 +11,11 @@ const colorByCode = (code) => {
       bgColor: 'blue',
       textColor: 'white'
     }
+  } else if (code === "DIP") {
+    return {
+      bgColor: 'cyan',
+      textColor: 'black'
+    }
   } else if (code === "PLP") {
     return {
       bgColor: 'antiquewhite',
@@ -62,7 +67,7 @@ const renderFestivalSeat = () => {
   const mainGrid = document.getElementById("main-grid");
   mainGrid.style.position = 'relative';
 
-  const areaRow = 10;
+  const areaRow = 17;
   const areaCol = 47;
   const areaOffsetRow = 20;
   const areaOffsetCol = 41;
@@ -92,7 +97,7 @@ const renderListSeat = (startDiv, data, horizontal, vertical, bgColor, textColor
     if (i === 0) {
       if (!isHorizontal) {
         const rowNameDiv = document.getElementById(`item-${currentDivIndex - COLUMN_AMOUNT}`);
-        if (rowNameDiv) {
+        if (rowNameDiv && data[i].row) {
           rowNameDiv.innerText = data[i].row;
         }
       } else {
@@ -102,7 +107,7 @@ const renderListSeat = (startDiv, data, horizontal, vertical, bgColor, textColor
           ? document.getElementById(`item-${currentDivIndex - 1}`)
           : document.getElementById(`item-${currentDivIndex + horizontal}`);
 
-        if (rowNameDiv) {
+        if (rowNameDiv && data[i].row) {
           rowNameDiv.innerText = data[i].row;
         }
       }
@@ -133,7 +138,7 @@ const renderListSeat = (startDiv, data, horizontal, vertical, bgColor, textColor
 const boxSection = (data, startDiv) => {
   const { bgColor, textColor } = colorByCode(data.code);
 
-  const codeHorizontalView = ["DI", "PLP", "PL", "GOP", "SIP"];
+  const codeHorizontalView = ["DI", "DIP", "PLP", "PL", "GOP", "SIP"];
 
   const isCodeHorizontal = codeHorizontalView.includes(data.code);
   const GOHorizontal = data.code === "GO" && ["GT9", "GT12"].includes(data.gt);
@@ -151,7 +156,7 @@ const boxSection = (data, startDiv) => {
 }
 
 const splitCode = (seatClass, seatCode) => {
-  if (seatClass === "FESTIVAL") {
+  if (["DIAMOND PLUS", "FESTIVAL"].includes(seatClass)) {
     const code = seatCode.match(/^[^\d]*/)[0];
     const number = parseInt(seatCode.match(/\d+/)[0]);
 
@@ -210,7 +215,8 @@ function createSeatObjects(seats) {
   let codeObjects = [];
 
   seats.forEach(seat => {
-    if (!['DIP', 'EX'].includes(seat.seat_class_code)) {
+    // if (seat.seat_class_code == 'DIP') console.log(seat)
+    if (!['EX'].includes(seat.seat_class_code)) {
       const { seatObject, newCode } = splitCode(seat.seat_class, seat.seat_code);
 
       seatObjects.push(seatObject);
