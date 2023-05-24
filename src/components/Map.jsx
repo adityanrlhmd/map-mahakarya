@@ -99,9 +99,10 @@ const Map = () => {
         type='button'
         onClick={refreshCheckIn}
         disabled={!isRefreshCheckIn}
-        className='fixed z-10 rounded-full bottom-6 right-7'
+        className='fixed z-10 px-4 py-2 bg-white border border-gray-400 rounded-lg bottom-6 right-7 disabled:bg-gray-400'
       >
-        <span className={`refresh-checkin ${!isRefreshCheckIn && 'refresh-checkin-load'}`}></span>
+        Refresh
+        {/* <span className={`refresh-checkin ${!isRefreshCheckIn && 'refresh-checkin-load'}`}></span> */}
       </button>
 
       <div className='overflow-auto'>
