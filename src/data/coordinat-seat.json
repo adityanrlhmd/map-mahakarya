@@ -2,8 +2,16 @@
   {
     "full_code": "DIPA",
     "code": "DIP",
-    "row": 42,
-    "col": 62
+    "row": 41,
+    "col": 48,
+    "breakpoint": 17
+  },
+  {
+    "full_code": "DIPB",
+    "code": "DIP",
+    "row": 43,
+    "col": 48,
+    "breakpoint": 17
   },
   {
     "full_code": "DIALE",

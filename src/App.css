@@ -17,19 +17,18 @@
   font-size: 10px;
   padding: 2px;
   position: relative;
-  /* color: purple; */
-  /* padding: 0 10px 0 10px; */
-  /* padding-bottom: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* color: antiquewhite; */
 }
 
 .isCheckIn {
-  @apply relative after:absolute after:inset-0 after:w-full after:h-full after:bg-[#00FF00] after:opacity-30 !text-black;
+  @apply relative !text-transparent after:absolute after:inset-0 after:w-full after:h-full after:bg-[#68f3f87f] after:text-black after:flex after:items-center after:justify-center;
 }
 
+.isCheckIn::after {
+  content: ' ' attr(number) ' ';
+}
 
 .space {
   border: 0.5px solid #000000 !important;

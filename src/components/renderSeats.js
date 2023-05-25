@@ -88,10 +88,17 @@ const renderFestivalSeat = () => {
   mainGrid.appendChild(div);
 }
 
-const renderListSeat = (startDiv, data, horizontal, vertical, bgColor, textColor, isHorizontal) => {
+const renderListSeat = (startDiv, data, horizontal, vertical, bgColor, textColor, isHorizontal, dataItem) => {
   for (let i = 0; i < horizontal; i++) {
     // horizontal
-    const currentDivIndex = startDiv + (i % horizontal) + Math.floor(i / COLUMN_AMOUNT) * COLUMN_AMOUNT;
+    let horizontalStartDiv = startDiv;
+
+    const BREAKPOINTGAP = 14;
+    if (dataItem.breakpoint <= i) {
+      horizontalStartDiv = getItemId(dataItem.row, dataItem.col + BREAKPOINTGAP);
+    }
+
+    const currentDivIndex = horizontalStartDiv + (i % horizontal) + Math.floor(i / COLUMN_AMOUNT) * COLUMN_AMOUNT;
     const currentDiv = document.getElementById(`item-${currentDivIndex}`);
 
     if (i === 0) {
@@ -118,6 +125,7 @@ const renderListSeat = (startDiv, data, horizontal, vertical, bgColor, textColor
     currentDiv.classList.add('boxSeat', '!border', "!border-black", 'cursor-pointer')
     currentDiv.innerText = data[i].number;
     currentDiv.setAttribute('name', data[i].seat_code);
+    currentDiv.setAttribute('number', data[i].number);
 
     // vertical
     for (let j = 1; j < vertical; j++) {
@@ -131,6 +139,7 @@ const renderListSeat = (startDiv, data, horizontal, vertical, bgColor, textColor
       currentDivVertical.classList.add('boxSeat', '!border', "!border-black", 'cursor-pointer')
       currentDivVertical.innerText = data[j].number;
       currentDivVertical.setAttribute('name', data[j].seat_code);
+      currentDivVertical.setAttribute('number', data[j].number);
     }
   }
 }
@@ -149,9 +158,9 @@ const boxSection = (data, startDiv) => {
   const lengthData = data.listSeat.length;
 
   if (isHorizontal) {
-    renderListSeat(startDiv, data.listSeat, lengthData, 1, bgColor, textColor, isHorizontal);
+    renderListSeat(startDiv, data.listSeat, lengthData, 1, bgColor, textColor, isHorizontal, data);
   } else if (data.code !== "FEST") {
-    renderListSeat(startDiv, data.listSeat, 1, lengthData, bgColor, textColor, isHorizontal);
+    renderListSeat(startDiv, data.listSeat, 1, lengthData, bgColor, textColor, isHorizontal, data);
   }
 }
 
@@ -264,6 +273,7 @@ export const renderSeats = async () => {
           jsonObj.col = refObj.col;
           jsonObj.offsetCol = refObj.offsetCol;
           jsonObj.offsetRow = refObj.offsetRow;
+          jsonObj.breakpoint = refObj.breakpoint;
           jsonObj.code = refObj.code;
         }
       });
@@ -274,7 +284,7 @@ export const renderSeats = async () => {
 
   const listRender = addCoordinatesToGroupedList(coordinat, groupedList);
 
-  listRender.map(item => {
+  listRender.map((item) => {
     const colNumber = item?.offsetCol ? item.col + item?.offsetCol || 0 : item.col;
     const rowNumber = item?.offsetRow ? item.row + item?.offsetRow || 0 : item.row;
 
