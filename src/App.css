@@ -16,6 +16,7 @@
   width: 100%;
   font-size: 10px;
   padding: 2px;
+  position: relative;
   /* color: purple; */
   /* padding: 0 10px 0 10px; */
   /* padding-bottom: 100%; */
@@ -26,8 +27,9 @@
 }
 
 .isCheckIn {
-  background-color: #42ba96 !important;
+  @apply relative after:absolute after:inset-0 after:w-full after:h-full after:bg-[#00FF00] after:opacity-30 !text-black;
 }
+
 
 .space {
   border: 0.5px solid #000000 !important;

@@ -48,7 +48,7 @@ const Map = () => {
       const dataCheckin = await getCheckIn();
 
       dataCheckin.map(item => {
-        const targetDiv = document.querySelector(`div[name="${item}"]`);
+        const targetDiv = document.querySelector(`div[name="${item.seat_code}"]`);
 
         if (targetDiv) {
           targetDiv.setAttribute('isCheckIn', true);

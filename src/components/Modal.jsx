@@ -20,7 +20,11 @@ const Modal = ({ seatCode, setIsShowModal, isCheckIn }) => {
       setIsLoadData(true)
       getDetail(seatCode)
         .then(data => {
-          setDataDetail(data?.data)
+          if (data?.success) {
+            setDataDetail(data?.data)
+          } else {
+            console.table(data)
+          }
         })
         .catch((err) => console.error(err))
         .finally(() => setIsLoadData(false))
