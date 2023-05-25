@@ -13,8 +13,8 @@ const colorByCode = (code) => {
     }
   } else if (code === "DIP") {
     return {
-      bgColor: 'cyan',
-      textColor: 'black'
+      bgColor: 'darkblue',
+      textColor: 'white'
     }
   } else if (code === "PLP") {
     return {
