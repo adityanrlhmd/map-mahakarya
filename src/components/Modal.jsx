@@ -72,7 +72,7 @@ const Modal = ({ seatCode, setIsShowModal, isCheckIn }) => {
                     <div className='flex flex-col items-center justify-center'>
                       <h4 className='text-sm text-center'>Name</h4>
                       <p className='text-center font-semibol'>
-                        {dataDetail?.first_name}
+                        {dataDetail?.first_name} {dataDetail?.last_name}
                       </p>
                     </div>
 
