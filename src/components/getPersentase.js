@@ -24,6 +24,7 @@ export const getPersentase = async () => {
 
   return {
     allPersentase: getDataPersentase(),
+    checkin: totalCheckin,
     leftOver: getLeftOver()
   }
 }

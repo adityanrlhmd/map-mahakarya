@@ -108,13 +108,17 @@ const Map = () => {
         />
       }
 
-      {
-        persentase &&
-        <div className='fixed z-10 flex flex-col px-4 py-2 bg-white border border-gray-400 rounded-lg bottom-6 left-7'>
-          <p>{persentase?.allPersentase.toFixed(2)}%</p>
-          <p>Left Over: {persentase?.leftOver}</p>
-        </div>
-      }
+      <div className='fixed z-10 flex flex-col px-4 py-2 bg-white border border-gray-400 rounded-lg bottom-6 left-7'>
+        {
+          persentase ?
+            <>
+              <p>{persentase?.allPersentase.toFixed(2)}%</p>
+              <p>Checkin: {persentase?.checkin}</p>
+              <p>Left Over: {persentase?.leftOver}</p>
+            </> :
+            <div>Loading...</div>
+        }
+      </div>
 
       <button
         type='button'
