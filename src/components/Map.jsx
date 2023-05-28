@@ -4,6 +4,7 @@ import { getCheckIn } from './getCheckIn'
 import { renderAreaAndGate } from './renderAreaAndGate'
 import { renderMap } from './renderMap'
 import { renderSeats } from './renderSeats'
+import { getPersentase } from './getPersentase'
 
 const initialRenderMap = async () => {
   try {
@@ -22,6 +23,8 @@ const Map = () => {
   const [seatCode, setSeatCode] = useState('');
   const [isShowModal, setIsShowModal] = useState(false);
   const [isCheckIn, setIsCheckIn] = useState(false);
+
+  const [persentase, setPersentase] = useState(null);
 
   const renderClickBox = () => {
     const boxSeats = document.querySelectorAll(`.boxSeat`);
@@ -81,11 +84,17 @@ const Map = () => {
     if (isInitial) {
       const interval = setInterval(() => {
         renderCheckIn()
+        getPersentase()
+          .then((res) => setPersentase(res))
       }, 5000);
 
       return () => clearInterval(interval);
     }
   }, [isInitial])
+
+  useEffect(() => {
+    getPersentase()
+  }, [])
 
   return (
     <>
@@ -97,6 +106,14 @@ const Map = () => {
           setSeatCode={setSeatCode}
           setIsShowModal={setIsShowModal}
         />
+      }
+
+      {
+        persentase &&
+        <div className='fixed z-10 flex flex-col px-4 py-2 bg-white border border-gray-400 rounded-lg bottom-6 left-7'>
+          <p>{persentase?.allPersentase.toFixed(2)}%</p>
+          <p>Left Over: {persentase?.leftOver}</p>
+        </div>
       }
 
       <button
