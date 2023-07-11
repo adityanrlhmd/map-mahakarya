@@ -1,5 +1,5 @@
 export const getPersentase = async () => {
-  const fetchPersentase = await fetch(`${import.meta.env.VITE_API_URL}/seat-class/checkin/leftovers/51-tahun-kerajaan-cinta-ahmad-dhani`, {
+  const fetchPersentase = await fetch(`${import.meta.env.VITE_API_URL}/seat-class/checkin/leftovers/konser-wanita-hebat`, {
     headers: {
       'api-key': import.meta.env.VITE_API_KEY
     }

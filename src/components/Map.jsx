@@ -80,17 +80,17 @@ const Map = () => {
     }
   }, [])
 
-  useEffect(() => {
-    if (isInitial) {
-      const interval = setInterval(() => {
-        renderCheckIn()
-        getPersentase()
-          .then((res) => setPersentase(res))
-      }, 5000);
+  // useEffect(() => {
+  //   if (isInitial) {
+  //     const interval = setInterval(() => {
+  //       renderCheckIn()
+  //       getPersentase()
+  //         .then((res) => setPersentase(res))
+  //     }, 5000);
 
-      return () => clearInterval(interval);
-    }
-  }, [isInitial])
+  //     return () => clearInterval(interval);
+  //   }
+  // }, [isInitial])
 
   useEffect(() => {
     getPersentase()

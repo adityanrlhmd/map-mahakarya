@@ -1,0 +1,1639 @@
+[
+  {
+    "full_code": "DIPA",
+    "code": "DIP",
+    "row": 41,
+    "col": 48,
+    "breakpoint": 17
+  },
+  {
+    "full_code": "DIPB",
+    "code": "DIP",
+    "row": 43,
+    "col": 48,
+    "breakpoint": 17
+  },
+  {
+    "full_code": "DIALE",
+    "code": "DI",
+    "row": 41,
+    "col": 48
+  },
+  {
+    "full_code": "DIARI",
+    "code": "DI",
+    "row": 41,
+    "col": 92
+  },
+  {
+    "full_code": "DIBLE",
+    "code": "DI",
+    "row": 43,
+    "col": 48
+  },
+  {
+    "full_code": "DIBRI",
+    "code": "DI",
+    "row": 43,
+    "col": 91
+  },
+  {
+    "full_code": "DICLE",
+    "code": "DI",
+    "row": 45,
+    "col": 48
+  },
+  {
+    "full_code": "DICRI",
+    "code": "DI",
+    "row": 45,
+    "col": 79
+  },
+  {
+    "full_code": "DIDLE",
+    "code": "DI",
+    "row": 47,
+    "col": 48
+  },
+  {
+    "full_code": "DIDRI",
+    "code": "DI",
+    "row": 47,
+    "col": 79
+  },
+  {
+    "full_code": "DIELE",
+    "code": "DI",
+    "row": 49,
+    "col": 48
+  },
+  {
+    "full_code": "DIERI",
+    "code": "DI",
+    "row": 49,
+    "col": 79
+  },
+  {
+    "full_code": "DIFLE",
+    "code": "DI",
+    "row": 51,
+    "col": 48
+  },
+  {
+    "full_code": "DIFRI",
+    "code": "DI",
+    "row": 51,
+    "col": 79
+  },
+  {
+    "full_code": "DIGLE",
+    "code": "DI",
+    "row": 53,
+    "col": 48
+  },
+  {
+    "full_code": "DIGRI",
+    "code": "DI",
+    "row": 53,
+    "col": 79
+  },
+  {
+    "full_code": "DIHLE",
+    "code": "DI",
+    "row": 55,
+    "col": 48
+  },
+  {
+    "full_code": "DIHRI",
+    "code": "DI",
+    "row": 55,
+    "col": 79
+  },
+  {
+    "full_code": "DIILE",
+    "code": "DI",
+    "row": 57,
+    "col": 48
+  },
+  {
+    "full_code": "DIIRI",
+    "code": "DI",
+    "row": 57,
+    "col": 79
+  },
+  {
+    "full_code": "DIJLE",
+    "code": "DI",
+    "row": 59,
+    "col": 48
+  },
+  {
+    "full_code": "DIJRI",
+    "code": "DI",
+    "row": 59,
+    "col": 79
+  },
+  {
+    "full_code": "PLPALE",
+    "code": "PLP",
+    "row": 62,
+    "col": 48
+  },
+  {
+    "full_code": "PLPARI",
+    "code": "PLP",
+    "row": 62,
+    "col": 79
+  },
+  {
+    "full_code": "PLPBLE",
+    "code": "PLP",
+    "row": 64,
+    "col": 48
+  },
+  {
+    "full_code": "PLPBRI",
+    "code": "PLP",
+    "row": 64,
+    "col": 79
+  },
+  {
+    "full_code": "PLPCLE",
+    "code": "PLP",
+    "row": 66,
+    "col": 48
+  },
+  {
+    "full_code": "PLPCRI",
+    "code": "PLP",
+    "row": 66,
+    "col": 79
+  },
+  {
+    "full_code": "PLPDLE",
+    "code": "PLP",
+    "row": 68,
+    "col": 48
+  },
+  {
+    "full_code": "PLPDRI",
+    "code": "PLP",
+    "row": 68,
+    "col": 79
+  },
+  {
+    "full_code": "PLPELE",
+    "code": "PLP",
+    "row": 70,
+    "col": 48
+  },
+  {
+    "full_code": "PLPERI",
+    "code": "PLP",
+    "row": 70,
+    "col": 79
+  },
+  {
+    "full_code": "PLPFLE",
+    "code": "PLP",
+    "row": 72,
+    "col": 48
+  },
+  {
+    "full_code": "PLPFRI",
+    "code": "PLP",
+    "row": 72,
+    "col": 80
+  },
+  {
+    "full_code": "PLPGLE",
+    "code": "PLP",
+    "row": 74,
+    "col": 47
+  },
+  {
+    "full_code": "PLPGRI",
+    "code": "PLP",
+    "row": 74,
+    "col": 80
+  },
+  {
+    "full_code": "PLPHLE",
+    "code": "PLP",
+    "row": 76,
+    "col": 47
+  },
+  {
+    "full_code": "PLPHRI",
+    "code": "PLP",
+    "row": 76,
+    "col": 80
+  },
+  {
+    "full_code": "FEST",
+    "code": "FEST",
+    "row": 2,
+    "col": 2
+  },
+  {
+    "full_code": "PLALE",
+    "code": "PL",
+    "row": 95,
+    "col": 47
+  },
+  {
+    "full_code": "PLAMI",
+    "code": "PL",
+    "row": 95,
+    "col": 58
+  },
+  {
+    "full_code": "PLARE",
+    "code": "PL",
+    "row": 95,
+    "col": 88
+  },
+  {
+    "full_code": "PLBLE",
+    "code": "PL",
+    "row": 96,
+    "col": 47
+  },
+  {
+    "full_code": "PLBMI",
+    "code": "PL",
+    "row": 96,
+    "col": 58
+  },
+  {
+    "full_code": "PLBRE",
+    "code": "PL",
+    "row": 96,
+    "col": 88
+  },
+  {
+    "full_code": "PLCLE",
+    "code": "PL",
+    "row": 97,
+    "col": 47
+  },
+  {
+    "full_code": "PLCMI",
+    "code": "PL",
+    "row": 97,
+    "col": 58
+  },
+  {
+    "full_code": "PLCRE",
+    "code": "PL",
+    "row": 97,
+    "col": 88
+  },
+  {
+    "full_code": "PLDLE",
+    "code": "PL",
+    "row": 98,
+    "col": 47
+  },
+  {
+    "full_code": "PLDMI",
+    "code": "PL",
+    "row": 98,
+    "col": 58
+  },
+  {
+    "full_code": "PLDRE",
+    "code": "PL",
+    "row": 98,
+    "col": 88
+  },
+  {
+    "full_code": "PLELE",
+    "code": "PL",
+    "row": 99,
+    "col": 46
+  },
+  {
+    "full_code": "PLEMI",
+    "code": "PL",
+    "row": 99,
+    "col": 61
+  },
+  {
+    "full_code": "PLERE",
+    "code": "PL",
+    "row": 99,
+    "col": 91
+  },
+  {
+    "full_code": "PLFLE",
+    "code": "PL",
+    "row": 100,
+    "col": 46
+  },
+  {
+    "full_code": "PLFMI",
+    "code": "PL",
+    "row": 100,
+    "col": 61
+  },
+  {
+    "full_code": "PLFRE",
+    "code": "PL",
+    "row": 100,
+    "col": 91
+  },
+  {
+    "full_code": "PLGLE",
+    "code": "PL",
+    "row": 101,
+    "col": 46
+  },
+  {
+    "full_code": "PLGMI",
+    "code": "PL",
+    "row": 101,
+    "col": 61
+  },
+  {
+    "full_code": "PLGRE",
+    "code": "PL",
+    "row": 101,
+    "col": 91
+  },
+  {
+    "full_code": "PLHLE",
+    "code": "PL",
+    "row": 102,
+    "col": 46
+  },
+  {
+    "full_code": "PLHMI",
+    "code": "PL",
+    "row": 102,
+    "col": 61
+  },
+  {
+    "full_code": "PLHRE",
+    "code": "PL",
+    "row": 102,
+    "col": 91
+  },
+  {
+    "full_code": "PLILE",
+    "code": "PL",
+    "row": 103,
+    "col": 46
+  },
+  {
+    "full_code": "PLIMI",
+    "code": "PL",
+    "row": 103,
+    "col": 61
+  },
+  {
+    "full_code": "PLIRE",
+    "code": "PL",
+    "row": 103,
+    "col": 91
+  },
+  {
+    "full_code": "GOPALE",
+    "code": "GOP",
+    "row": 104,
+    "col": 46
+  },
+  {
+    "full_code": "GOPAMI",
+    "code": "GOP",
+    "row": 104,
+    "col": 61
+  },
+  {
+    "full_code": "GOPARE",
+    "code": "GOP",
+    "row": 104,
+    "col": 91
+  },
+  {
+    "full_code": "GOPBLE",
+    "code": "GOP",
+    "row": 105,
+    "col": 46
+  },
+  {
+    "full_code": "GOPBMI",
+    "code": "GOP",
+    "row": 105,
+    "col": 61
+  },
+  {
+    "full_code": "GOPBRE",
+    "code": "GOP",
+    "row": 105,
+    "col": 91
+  },
+  {
+    "full_code": "GOPCLE",
+    "code": "GOP",
+    "row": 106,
+    "col": 46
+  },
+  {
+    "full_code": "GOPCMI",
+    "code": "GOP",
+    "row": 106,
+    "col": 58
+  },
+  {
+    "full_code": "GOPCRE",
+    "code": "GOP",
+    "row": 106,
+    "col": 88
+  },
+  {
+    "full_code": "GOPDLE",
+    "code": "GOP",
+    "row": 107,
+    "col": 46
+  },
+  {
+    "full_code": "GOPDMI",
+    "code": "GOP",
+    "row": 107,
+    "col": 58
+  },
+  {
+    "full_code": "GOPDRE",
+    "code": "GOP",
+    "row": 107,
+    "col": 88
+  },
+  {
+    "full_code": "GOPELE",
+    "code": "GOP",
+    "row": 108,
+    "col": 46
+  },
+  {
+    "full_code": "GOPEMI",
+    "code": "GOP",
+    "row": 108,
+    "col": 58
+  },
+  {
+    "full_code": "GOPERE",
+    "code": "GOP",
+    "row": 108,
+    "col": 88
+  },
+  {
+    "full_code": "GOPFLE",
+    "code": "GOP",
+    "row": 109,
+    "col": 46
+  },
+  {
+    "full_code": "GOPFMI",
+    "code": "GOP",
+    "row": 109,
+    "col": 58
+  },
+  {
+    "full_code": "GOPFRE",
+    "code": "GOP",
+    "row": 109,
+    "col": 88
+  },
+  {
+    "full_code": "GOPGMI",
+    "code": "GOP",
+    "row": 110,
+    "col": 58
+  },
+  {
+    "full_code": "SIPALE",
+    "code": "SIP",
+    "row": 110,
+    "col": 46
+  },
+  {
+    "full_code": "SIPARI",
+    "code": "SIP",
+    "row": 110,
+    "col": 88
+  },
+  {
+    "full_code": "SIPBLE",
+    "code": "SIP",
+    "row": 111,
+    "col": 46
+  },
+  {
+    "full_code": "SIPBRI",
+    "code": "SIP",
+    "row": 111,
+    "col": 88
+  },
+  {
+    "full_code": "SIPCLE",
+    "code": "SIP",
+    "row": 112,
+    "col": 46
+  },
+  {
+    "full_code": "SIPCRI",
+    "code": "SIP",
+    "row": 112,
+    "col": 88
+  },
+  {
+    "full_code": "SIPDLE",
+    "code": "SIP",
+    "row": 113,
+    "col": 46,
+    "offsetCol": 6
+  },
+  {
+    "full_code": "SIPDRI",
+    "code": "SIP",
+    "row": 113,
+    "col": 88
+  },
+  {
+    "full_code": "GOALEGT1",
+    "code": "GO",
+    "row": 6,
+    "col": 41
+  },
+  {
+    "full_code": "GOALEGT2",
+    "code": "GO",
+    "row": 38,
+    "col": 41
+  },
+  {
+    "full_code": "GOALEGT3",
+    "code": "GO",
+    "row": 68,
+    "col": 41
+  },
+  {
+    "full_code": "GOARIGT6",
+    "code": "GO",
+    "row": 6,
+    "col": 102
+  },
+  {
+    "full_code": "GOARIGT5",
+    "code": "GO",
+    "row": 38,
+    "col": 102
+  },
+  {
+    "full_code": "GOARIGT4",
+    "code": "GO",
+    "row": 68,
+    "col": 102
+  },
+  {
+    "full_code": "GOALEGT9",
+    "code": "GO",
+    "row": 95,
+    "col": 37
+  },
+  {
+    "full_code": "GOARIGT12",
+    "code": "GO",
+    "row": 95,
+    "col": 99
+  },
+  {
+    "full_code": "GOBLEGT1",
+    "code": "GO",
+    "row": 6,
+    "col": 40
+  },
+  {
+    "full_code": "GOBLEGT2",
+    "code": "GO",
+    "row": 38,
+    "col": 40
+  },
+  {
+    "full_code": "GOBLEGT3",
+    "code": "GO",
+    "row": 68,
+    "col": 40
+  },
+  {
+    "full_code": "GOBRIGT6",
+    "code": "GO",
+    "row": 6,
+    "col": 103
+  },
+  {
+    "full_code": "GOBRIGT5",
+    "code": "GO",
+    "row": 38,
+    "col": 103
+  },
+  {
+    "full_code": "GOBRIGT4",
+    "code": "GO",
+    "row": 68,
+    "col": 103
+  },
+  {
+    "full_code": "GOBLEGT9",
+    "code": "GO",
+    "row": 96,
+    "col": 36
+  },
+  {
+    "full_code": "GOBRIGT12",
+    "code": "GO",
+    "row": 96,
+    "col": 99
+  },
+  {
+    "full_code": "GOCLEGT1",
+    "code": "GO",
+    "row": 6,
+    "col": 39
+  },
+  {
+    "full_code": "GOCLEGT2",
+    "code": "GO",
+    "row": 38,
+    "col": 39
+  },
+  {
+    "full_code": "GOCLEGT3",
+    "code": "GO",
+    "row": 68,
+    "col": 39
+  },
+  {
+    "full_code": "GOCRIGT6",
+    "code": "GO",
+    "row": 6,
+    "col": 104
+  },
+  {
+    "full_code": "GOCRIGT5",
+    "code": "GO",
+    "row": 38,
+    "col": 104
+  },
+  {
+    "full_code": "GOCRIGT4",
+    "code": "GO",
+    "row": 68,
+    "col": 104
+  },
+  {
+    "full_code": "GOCLEGT9",
+    "code": "GO",
+    "row": 97,
+    "col": 35
+  },
+  {
+    "full_code": "GOCRIGT12",
+    "code": "GO",
+    "row": 97,
+    "col": 99
+  },
+  {
+    "full_code": "GODLEGT1",
+    "code": "GO",
+    "row": 6,
+    "col": 38
+  },
+  {
+    "full_code": "GODLEGT2",
+    "code": "GO",
+    "row": 38,
+    "col": 38
+  },
+  {
+    "full_code": "GODLEGT3",
+    "code": "GO",
+    "row": 68,
+    "col": 38
+  },
+  {
+    "full_code": "GODRIGT6",
+    "code": "GO",
+    "row": 6,
+    "col": 105
+  },
+  {
+    "full_code": "GODRIGT5",
+    "code": "GO",
+    "row": 38,
+    "col": 105
+  },
+  {
+    "full_code": "GODRIGT4",
+    "code": "GO",
+    "row": 68,
+    "col": 105
+  },
+  {
+    "full_code": "GODLEGT9",
+    "code": "GO",
+    "row": 98,
+    "col": 34
+  },
+  {
+    "full_code": "GODRIGT12",
+    "code": "GO",
+    "row": 98,
+    "col": 99
+  },
+  {
+    "full_code": "GOELEGT9",
+    "code": "GO",
+    "row": 99,
+    "col": 34
+  },
+  {
+    "full_code": "GOERIGT12",
+    "code": "GO",
+    "row": 99,
+    "col": 99
+  },
+  {
+    "full_code": "GOFLEGT9",
+    "code": "GO",
+    "row": 100,
+    "col": 33
+  },
+  {
+    "full_code": "GOFRIGT12",
+    "code": "GO",
+    "row": 100,
+    "col": 99
+  },
+  {
+    "full_code": "GOGLEGT9",
+    "code": "GO",
+    "row": 101,
+    "col": 32
+  },
+  {
+    "full_code": "GOGRIGT12",
+    "code": "GO",
+    "row": 101,
+    "col": 99
+  },
+  {
+    "full_code": "GOHLEGT9",
+    "code": "GO",
+    "row": 102,
+    "col": 31
+  },
+  {
+    "full_code": "GOHRIGT12",
+    "code": "GO",
+    "row": 102,
+    "col": 99
+  },
+  {
+    "full_code": "GOILEGT9",
+    "code": "GO",
+    "row": 103,
+    "col": 30
+  },
+  {
+    "full_code": "GOIRIGT12",
+    "code": "GO",
+    "row": 103,
+    "col": 99
+  },
+  {
+    "full_code": "GOJLEGT9",
+    "code": "GO",
+    "row": 104,
+    "col": 29
+  },
+  {
+    "full_code": "GOJRIGT12",
+    "code": "GO",
+    "row": 104,
+    "col": 99
+  },
+  {
+    "full_code": "GOKLEGT9",
+    "code": "GO",
+    "row": 105,
+    "col": 25
+  },
+  {
+    "full_code": "GOKRIGT12",
+    "code": "GO",
+    "row": 105,
+    "col": 99
+  },
+  {
+    "full_code": "GOLLEGT9",
+    "code": "GO",
+    "row": 106,
+    "col": 19
+  },
+  {
+    "full_code": "GOLRIGT12",
+    "code": "GO",
+    "row": 106,
+    "col": 99
+  },
+  {
+    "full_code": "GOMLEGT9",
+    "code": "GO",
+    "row": 107,
+    "col": 18
+  },
+  {
+    "full_code": "GOMRIGT12",
+    "code": "GO",
+    "row": 107,
+    "col": 99
+  },
+  {
+    "full_code": "GONLEGT9",
+    "code": "GO",
+    "row": 108,
+    "col": 16
+  },
+  {
+    "full_code": "GONRIGT12",
+    "code": "GO",
+    "row": 108,
+    "col": 99
+  },
+  {
+    "full_code": "GOOLEGT9",
+    "code": "GO",
+    "row": 109,
+    "col": 15
+  },
+  {
+    "full_code": "GOORIGT12",
+    "code": "GO",
+    "row": 109,
+    "col": 99
+  },
+  {
+    "full_code": "SIALEGT1",
+    "code": "SI",
+    "row": 5,
+    "col": 29,
+    "offsetRow": 2
+  },
+  {
+    "full_code": "SIBLEGT1",
+    "code": "SI",
+    "row": 5,
+    "col": 28,
+    "offsetRow": 2
+  },
+  {
+    "full_code": "SICLEGT1",
+    "code": "SI",
+    "row": 5,
+    "col": 24
+  },
+  {
+    "full_code": "SIDLEGT1",
+    "code": "SI",
+    "row": 5,
+    "col": 23
+  },
+  {
+    "full_code": "SIELEGT1",
+    "code": "SI",
+    "row": 5,
+    "col": 22
+  },
+  {
+    "full_code": "SIFLEGT1",
+    "code": "SI",
+    "row": 5,
+    "col": 21
+  },
+  {
+    "full_code": "SIGLEGT1",
+    "code": "SI",
+    "row": 5,
+    "col": 20
+  },
+  {
+    "full_code": "SIHLEGT1",
+    "code": "SI",
+    "row": 5,
+    "col": 17
+  },
+  {
+    "full_code": "SIILEGT1",
+    "code": "SI",
+    "row": 5,
+    "col": 16
+  },
+  {
+    "full_code": "SIJLEGT1",
+    "code": "SI",
+    "row": 5,
+    "col": 15
+  },
+  {
+    "full_code": "SIKLEGT1",
+    "code": "SI",
+    "row": 5,
+    "col": 14
+  },
+  {
+    "full_code": "SILLEGT1",
+    "code": "SI",
+    "row": 5,
+    "col": 13
+  },
+  {
+    "full_code": "SIMLEGT1",
+    "code": "SI",
+    "row": 5,
+    "col": 12
+  },
+  {
+    "full_code": "SINLEGT1",
+    "code": "SI",
+    "row": 5,
+    "col": 11
+  },
+  {
+    "full_code": "SIALEGT8",
+    "code": "SI",
+    "row": 30,
+    "col": 12
+  },
+  {
+    "full_code": "SIBLEGT8",
+    "code": "SI",
+    "row": 30,
+    "col": 11
+  },
+  {
+    "full_code": "SICLEGT8",
+    "code": "SI",
+    "row": 30,
+    "col": 10
+  },
+  {
+    "full_code": "SIALEGT2",
+    "code": "SI",
+    "row": 40,
+    "col": 29,
+    "offsetRow": 3
+  },
+  {
+    "full_code": "SIBLEGT2",
+    "code": "SI",
+    "row": 40,
+    "col": 28,
+    "offsetRow": 3
+  },
+  {
+    "full_code": "SICLEGT2",
+    "code": "SI",
+    "row": 40,
+    "col": 23,
+    "offsetRow": 3
+  },
+  {
+    "full_code": "SIDLEGT2",
+    "code": "SI",
+    "row": 40,
+    "col": 22,
+    "offsetRow": 3
+  },
+  {
+    "full_code": "SIELEGT2",
+    "code": "SI",
+    "row": 40,
+    "col": 21,
+    "offsetRow": 15
+  },
+  {
+    "full_code": "SIFLEGT2",
+    "code": "SI",
+    "row": 40,
+    "col": 20,
+    "offsetRow": 15
+  },
+  {
+    "full_code": "SIGLEGT2",
+    "code": "SI",
+    "row": 40,
+    "col": 19,
+    "offsetRow": 15
+  },
+  {
+    "full_code": "SIHLEGT2",
+    "code": "SI",
+    "row": 40,
+    "col": 17,
+    "offsetRow": 15
+  },
+  {
+    "full_code": "SIILEGT2",
+    "code": "SI",
+    "row": 40,
+    "col": 16,
+    "offsetRow": 3
+  },
+  {
+    "full_code": "SIJLEGT2",
+    "code": "SI",
+    "row": 40,
+    "col": 15
+  },
+  {
+    "full_code": "SIKLEGT2",
+    "code": "SI",
+    "row": 40,
+    "col": 14
+  },
+  {
+    "full_code": "SILLEGT2",
+    "code": "SI",
+    "row": 40,
+    "col": 13
+  },
+  {
+    "full_code": "SIMLEGT2",
+    "code": "SI",
+    "row": 40,
+    "col": 12
+  },
+  {
+    "full_code": "SINLEGT2",
+    "code": "SI",
+    "row": 40,
+    "col": 11
+  },
+  {
+    "full_code": "SIALEGT3",
+    "code": "SI",
+    "row": 65,
+    "col": 23,
+    "offsetRow": 3
+  },
+  {
+    "full_code": "SIBLEGT3",
+    "code": "SI",
+    "row": 65,
+    "col": 22
+  },
+  {
+    "full_code": "SICLEGT3",
+    "code": "SI",
+    "row": 65,
+    "col": 21
+  },
+  {
+    "full_code": "SIDLEGT3",
+    "code": "SI",
+    "row": 65,
+    "col": 20
+  },
+  {
+    "full_code": "SIELEGT3",
+    "code": "SI",
+    "row": 65,
+    "col": 19
+  },
+  {
+    "full_code": "SIFLEGT3",
+    "code": "SI",
+    "row": 65,
+    "col": 18
+  },
+  {
+    "full_code": "SIGLEGT3",
+    "code": "SI",
+    "row": 65,
+    "col": 17
+  },
+  {
+    "full_code": "SIHLEGT3",
+    "code": "SI",
+    "row": 65,
+    "col": 16
+  },
+  {
+    "full_code": "SIILEGT3",
+    "code": "SI",
+    "row": 65,
+    "col": 15
+  },
+  {
+    "full_code": "SIJLEGT3",
+    "code": "SI",
+    "row": 65,
+    "col": 14
+  },
+  {
+    "full_code": "SIKLEGT3",
+    "code": "SI",
+    "row": 65,
+    "col": 13
+  },
+  {
+    "full_code": "SILLEGT3",
+    "code": "SI",
+    "row": 65,
+    "col": 12
+  },
+  {
+    "full_code": "SIMLEGT3",
+    "code": "SI",
+    "row": 65,
+    "col": 11
+  },
+  {
+    "full_code": "SIARIGT4",
+    "code": "SI",
+    "row": 65,
+    "col": 120,
+    "offsetRow": 3
+  },
+  {
+    "full_code": "SIBRIGT4",
+    "code": "SI",
+    "row": 65,
+    "col": 121
+  },
+  {
+    "full_code": "SICRIGT4",
+    "code": "SI",
+    "row": 65,
+    "col": 122
+  },
+  {
+    "full_code": "SIDRIGT4",
+    "code": "SI",
+    "row": 65,
+    "col": 123
+  },
+  {
+    "full_code": "SIERIGT4",
+    "code": "SI",
+    "row": 65,
+    "col": 124
+  },
+  {
+    "full_code": "SIFRIGT4",
+    "code": "SI",
+    "row": 65,
+    "col": 125
+  },
+  {
+    "full_code": "SIGRIGT4",
+    "code": "SI",
+    "row": 65,
+    "col": 126
+  },
+  {
+    "full_code": "SIHRIGT4",
+    "code": "SI",
+    "row": 65,
+    "col": 127
+  },
+  {
+    "full_code": "SIIRIGT4",
+    "code": "SI",
+    "row": 65,
+    "col": 128
+  },
+  {
+    "full_code": "SIJRIGT4",
+    "code": "SI",
+    "row": 65,
+    "col": 129
+  },
+  {
+    "full_code": "SIARIGT5",
+    "code": "SI",
+    "row": 35,
+    "col": 121
+  },
+  {
+    "full_code": "SIBRIGT5",
+    "code": "SI",
+    "row": 35,
+    "col": 122
+  },
+  {
+    "full_code": "SICRIGT5",
+    "code": "SI",
+    "row": 35,
+    "col": 123
+  },
+  {
+    "full_code": "SIDRIGT5",
+    "code": "SI",
+    "row": 35,
+    "col": 124
+  },
+  {
+    "full_code": "SIERIGT5",
+    "code": "SI",
+    "row": 35,
+    "col": 125
+  },
+  {
+    "full_code": "SIFRIGT5",
+    "code": "SI",
+    "row": 35,
+    "col": 126
+  },
+  {
+    "full_code": "SIGRIGT5",
+    "code": "SI",
+    "row": 35,
+    "col": 127
+  },
+  {
+    "full_code": "SIHRIGT5",
+    "code": "SI",
+    "row": 35,
+    "col": 128
+  },
+  {
+    "full_code": "SIIRIGT5",
+    "code": "SI",
+    "row": 35,
+    "col": 129
+  },
+  {
+    "full_code": "SIARIGT6",
+    "code": "SI",
+    "row": 5,
+    "col": 121
+  },
+  {
+    "full_code": "SIBRIGT6",
+    "code": "SI",
+    "row": 5,
+    "col": 122
+  },
+  {
+    "full_code": "SICRIGT6",
+    "code": "SI",
+    "row": 5,
+    "col": 123
+  },
+  {
+    "full_code": "SIDRIGT6",
+    "code": "SI",
+    "row": 5,
+    "col": 124
+  },
+  {
+    "full_code": "SIERIGT6",
+    "code": "SI",
+    "row": 5,
+    "col": 125
+  },
+  {
+    "full_code": "SIFRIGT6",
+    "code": "SI",
+    "row": 5,
+    "col": 126
+  },
+  {
+    "full_code": "SIGRIGT6",
+    "code": "SI",
+    "row": 5,
+    "col": 127
+  },
+  {
+    "full_code": "SIHRIGT6",
+    "code": "SI",
+    "row": 5,
+    "col": 128
+  },
+  {
+    "full_code": "SIIRIGT6",
+    "code": "SI",
+    "row": 5,
+    "col": 129
+  },
+  {
+    "full_code": "SIALEGT9",
+    "code": "SI",
+    "row": 110,
+    "col": 12
+  },
+  {
+    "full_code": "SIBLEGT9",
+    "code": "SI",
+    "row": 111,
+    "col": 11
+  },
+  {
+    "full_code": "SICLEGT9",
+    "code": "SI",
+    "row": 112,
+    "col": 9
+  },
+  {
+    "full_code": "SIDLEGT9",
+    "code": "SI",
+    "row": 113,
+    "col": 7
+  },
+  {
+    "full_code": "SIARIGT12",
+    "code": "SI",
+    "row": 110,
+    "col": 99
+  },
+  {
+    "full_code": "SIBRIGT12",
+    "code": "SI",
+    "row": 111,
+    "col": 99
+  },
+  {
+    "full_code": "SICRIGT12",
+    "code": "SI",
+    "row": 112,
+    "col": 99
+  },
+  {
+    "full_code": "SIDRIGT12",
+    "code": "SI",
+    "row": 113,
+    "col": 99
+  },
+  {
+    "full_code": "BRALEGT1",
+    "code": "BR",
+    "row": 5,
+    "col": 10
+  },
+  {
+    "full_code": "BRBLEGT1",
+    "code": "BR",
+    "row": 5,
+    "col": 9
+  },
+  {
+    "full_code": "BRCLEGT1",
+    "code": "BR",
+    "row": 5,
+    "col": 8
+  },
+  {
+    "full_code": "BRDLEGT1",
+    "code": "BR",
+    "row": 5,
+    "col": 7
+  },
+  {
+    "full_code": "BRELEGT1",
+    "code": "BR",
+    "row": 5,
+    "col": 6
+  },
+  {
+    "full_code": "BRFLEGT1",
+    "code": "BR",
+    "row": 5,
+    "col": 5
+  },
+  {
+    "full_code": "BRALEGT8",
+    "code": "BR",
+    "row": 30,
+    "col": 9
+  },
+  {
+    "full_code": "BRBLEGT8",
+    "code": "BR",
+    "row": 30,
+    "col": 8
+  },
+  {
+    "full_code": "BRCLEGT8",
+    "code": "BR",
+    "row": 30,
+    "col": 7,
+    "offsetRow": 3
+  },
+  {
+    "full_code": "BRDLEGT8",
+    "code": "BR",
+    "row": 30,
+    "col": 6,
+    "offsetRow": 3
+  },
+  {
+    "full_code": "BRELEGT8",
+    "code": "BR",
+    "row": 30,
+    "col": 5,
+    "offsetRow": 3
+  },
+  {
+    "full_code": "BRALEGT2",
+    "code": "BR",
+    "row": 40,
+    "col": 10
+  },
+  {
+    "full_code": "BRBLEGT2",
+    "code": "BR",
+    "row": 40,
+    "col": 9
+  },
+  {
+    "full_code": "BRCLEGT2",
+    "code": "BR",
+    "row": 40,
+    "col": 8
+  },
+  {
+    "full_code": "BRDLEGT2",
+    "code": "BR",
+    "row": 40,
+    "col": 7
+  },
+  {
+    "full_code": "BRELEGT2",
+    "code": "BR",
+    "row": 40,
+    "col": 6
+  },
+  {
+    "full_code": "BRFLEGT2",
+    "code": "BR",
+    "row": 40,
+    "col": 5
+  },
+  {
+    "full_code": "BRALEGT3",
+    "code": "BR",
+    "row": 65,
+    "col": 10
+  },
+  {
+    "full_code": "BRBLEGT3",
+    "code": "BR",
+    "row": 65,
+    "col": 9
+  },
+  {
+    "full_code": "BRCLEGT3",
+    "code": "BR",
+    "row": 65,
+    "col": 8
+  },
+  {
+    "full_code": "BRDLEGT3",
+    "code": "BR",
+    "row": 65,
+    "col": 7
+  },
+  {
+    "full_code": "BRELEGT3",
+    "code": "BR",
+    "row": 65,
+    "col": 6
+  },
+  {
+    "full_code": "BRFLEGT3",
+    "code": "BR",
+    "row": 65,
+    "col": 5
+  },
+  {
+    "full_code": "BRARIGT4",
+    "code": "BR",
+    "row": 65,
+    "col": 130
+  },
+  {
+    "full_code": "BRBRIGT4",
+    "code": "BR",
+    "row": 65,
+    "col": 131
+  },
+  {
+    "full_code": "BRCRIGT4",
+    "code": "BR",
+    "row": 65,
+    "col": 132
+  },
+  {
+    "full_code": "BRDRIGT4",
+    "code": "BR",
+    "row": 65,
+    "col": 133
+  },
+  {
+    "full_code": "BRERIGT4",
+    "code": "BR",
+    "row": 65,
+    "col": 134
+  },
+  {
+    "full_code": "BRFRIGT4",
+    "code": "BR",
+    "row": 65,
+    "col": 135,
+    "offsetRow": 19
+  },
+  {
+    "full_code": "BRGRIGT4",
+    "code": "BR",
+    "row": 65,
+    "col": 136,
+    "offsetRow": 21
+  },
+  {
+    "full_code": "BRHRIGT4",
+    "code": "BR",
+    "row": 65,
+    "col": 137,
+    "offsetRow": 23
+  },
+  {
+    "full_code": "BRIRIGT4",
+    "code": "BR",
+    "row": 65,
+    "col": 138,
+    "offsetRow": 25
+  },
+  {
+    "full_code": "BRARIGT5",
+    "code": "BR",
+    "row": 35,
+    "col": 130
+  },
+  {
+    "full_code": "BRBRIGT5",
+    "code": "BR",
+    "row": 35,
+    "col": 131
+  },
+  {
+    "full_code": "BRCRIGT5",
+    "code": "BR",
+    "row": 35,
+    "col": 132
+  },
+  {
+    "full_code": "BRDRIGT5",
+    "code": "BR",
+    "row": 35,
+    "col": 133
+  },
+  {
+    "full_code": "BRERIGT5",
+    "code": "BR",
+    "row": 35,
+    "col": 134
+  },
+  {
+    "full_code": "BRARIGT6",
+    "code": "BR",
+    "row": 5,
+    "col": 130
+  },
+  {
+    "full_code": "BRBRIGT6",
+    "code": "BR",
+    "row": 5,
+    "col": 131
+  },
+  {
+    "full_code": "BRCRIGT6",
+    "code": "BR",
+    "row": 5,
+    "col": 132
+  },
+  {
+    "full_code": "BRDRIGT6",
+    "code": "BR",
+    "row": 5,
+    "col": 133
+  },
+  {
+    "full_code": "BRERIGT6",
+    "code": "BR",
+    "row": 5,
+    "col": 134
+  }
+]

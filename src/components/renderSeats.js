@@ -6,12 +6,13 @@ const getItemId = (row, col) => {
 }
 
 const colorByCode = (code) => {
-  if (code === "DI") {
+  if (code === "VIP") {
     return {
       bgColor: 'blue',
       textColor: 'white'
     }
-  } else if (code === "DIP") {
+    // INI HARDCODE HARUS UBAH
+  } else if (code === "SVIP") {
     return {
       bgColor: 'darkblue',
       textColor: 'white'
@@ -89,16 +90,127 @@ const renderFestivalSeat = () => {
 }
 
 const renderListSeat = (startDiv, data, horizontal, vertical, bgColor, textColor, isHorizontal, dataItem) => {
+  let breakpointsLength;
+  let tempHorizontalValue;
+  let breakpointsColLength;
+  let localIteration = 0;
+  let rowBreakpoint = 0;
+  let breakpointRowIndex = 0;
+  let breakpointColumnIndex = 0;
+
+  let breakpointAccumulator = 0;
+  let horizontalValue = horizontal;
+  
+  if (dataItem.breakpoints && dataItem.breakpoints.length > 0) {
+    // setup initial length
+    breakpointsLength = dataItem.breakpoints.length;
+    breakpointsColLength = dataItem.breakpoints[breakpointRowIndex].length - 1;
+
+    breakpointAccumulator = dataItem.breakpoints[breakpointRowIndex][breakpointColumnIndex];
+    horizontalValue = dataItem.breakpoints[breakpointRowIndex].reduce((accumulator, currentValue) => {
+      return accumulator + currentValue;
+    }, 0);
+    rowBreakpoint += horizontalValue;
+  }
+
   for (let i = 0; i < horizontal; i++) {
+    if (i === 506) {
+      break;
+    }
+    // Will reset after changing row
+    localIteration++
+
     // horizontal
     let horizontalStartDiv = startDiv;
 
-    const BREAKPOINTGAP = 14;
+    const BREAKPOINTGAP = 2;
     if (dataItem.breakpoint <= i) {
-      horizontalStartDiv = getItemId(dataItem.row, dataItem.col + BREAKPOINTGAP);
+      horizontalStartDiv = getItemId(rowDataIndex, dataItem.col + BREAKPOINTGAP);
     }
 
-    const currentDivIndex = horizontalStartDiv + (i % horizontal) + Math.floor(i / COLUMN_AMOUNT) * COLUMN_AMOUNT;
+    if (dataItem.breakpoints && dataItem.breakpoints.length > 0) {
+      let nextAccumulatorData = breakpointAccumulator + dataItem.breakpoints[breakpointRowIndex][breakpointColumnIndex + 1];
+
+      if (isNaN(nextAccumulatorData)) {
+        nextAccumulatorData = breakpointAccumulator + dataItem.breakpoints[breakpointRowIndex + 1][0];
+        console.log("nextAccumulatorData", nextAccumulatorData)
+      }
+
+      if (nextAccumulatorData === i) {
+        // Kalau udah masuk breakpoint selanjutnya, tambah column index, kemudian tambah breakpoint accumulator
+        breakpointColumnIndex++;
+
+        // Kalau iterasi sudah sama dengan break point, maka break point acumulatornya naik
+        let breakpointsColData = dataItem.breakpoints[breakpointRowIndex][breakpointColumnIndex];
+        if (isNaN(breakpointsColData)) {
+          breakpointsColData = dataItem.breakpoints[breakpointRowIndex + 1][0];
+        }
+
+        breakpointAccumulator += breakpointsColData
+      }
+      
+      // console.log('breakpointAccumulator', breakpointAccumulator)
+      // If the col index is the same with the accumulator data
+      if (breakpointAccumulator <= i) {
+        let colDataIndex = 0;
+
+        if (breakpointRowIndex === 0) {
+          colDataIndex = breakpointColumnIndex === 0 ? BREAKPOINTGAP : BREAKPOINTGAP * (breakpointColumnIndex + 1);
+        } else {
+          colDataIndex = breakpointColumnIndex === 0 ? 0 : BREAKPOINTGAP * (breakpointColumnIndex);
+        }
+        
+        if (rowBreakpoint === i) {
+          breakpointRowIndex++;
+          breakpointsColLength = dataItem.breakpoints[breakpointRowIndex].length - 1;
+  
+          // reset column index
+          breakpointColumnIndex = 0;
+
+          horizontalValue = dataItem.breakpoints[breakpointRowIndex].reduce((accumulator, currentValue) => {
+            return accumulator + currentValue;
+          }, 0);
+        
+          // if (i > 141) {
+          //   horizontalValue = tempHorizontalValue
+          // }
+
+          // Update horizontal value
+          rowBreakpoint += dataItem.breakpoints[breakpointRowIndex].reduce((accumulator, currentValue) => {
+            return accumulator + currentValue;
+          }, 0);
+
+          localIteration = 0
+          colDataIndex = 0;
+        }
+
+        // if column length is maximum, then shift to next row
+        // space after breakpoint
+        // math: 20 + (2 * 0) = 20
+        console.log(breakpointRowIndex)
+        const rowDataIndex = dataItem.row + (BREAKPOINTGAP * breakpointRowIndex);
+
+        //overwrite start div
+        // math: 15 + (2 * 0) = 15
+        horizontalStartDiv = getItemId(rowDataIndex, dataItem.col + colDataIndex);
+        if (i == 142) {
+          console.log("rowDataIndex", rowDataIndex);
+          console.log("col", dataItem.col)
+          console.log("colDataIndex", colDataIndex)
+          console.log("horizontalStartDiv", horizontalStartDiv)
+        }
+      }
+    }
+
+    const currentDivIndex = horizontalStartDiv + (localIteration % horizontalValue) + Math.floor(i / COLUMN_AMOUNT) * COLUMN_AMOUNT;
+
+    if (i == 142) {
+      console.log("Iteration", i);
+      console.log("horizontalStartDiv", horizontalStartDiv)
+      console.log("currentDivIndex", currentDivIndex)
+      console.log("horizontalValue", horizontalValue)
+    }
+
     const currentDiv = document.getElementById(`item-${currentDivIndex}`);
 
     if (i === 0) {
@@ -109,6 +221,7 @@ const renderListSeat = (startDiv, data, horizontal, vertical, bgColor, textColor
         }
       } else {
         const codeWing = data[i].code + data[i].wingAndGt;
+        // INI HARDCODE HARUS UBAH
         const codeRowNameLeft = ['SIPLE', 'GOPLE', 'PLLE', 'SIRIGT12', 'GORIGT12', 'DILE', 'PLPLE'];
         const rowNameDiv = codeRowNameLeft.includes(codeWing)
           ? document.getElementById(`item-${currentDivIndex - 1}`)
@@ -147,7 +260,8 @@ const renderListSeat = (startDiv, data, horizontal, vertical, bgColor, textColor
 const boxSection = (data, startDiv) => {
   const { bgColor, textColor } = colorByCode(data.code);
 
-  const codeHorizontalView = ["DI", "DIP", "PLP", "PL", "GOP", "SIP"];
+  // INI HARDCODE HARUS UBAH
+  const codeHorizontalView = ["SVIP", "VIP", "PLP", "PL", "GOP", "SIP"];
 
   const isCodeHorizontal = codeHorizontalView.includes(data.code);
   const GOHorizontal = data.code === "GO" && ["GT9", "GT12"].includes(data.gt);
@@ -156,16 +270,19 @@ const boxSection = (data, startDiv) => {
   const isHorizontal = isCodeHorizontal || GOHorizontal || SIHorizontal;
 
   const lengthData = data.listSeat.length;
-
-  if (isHorizontal) {
-    renderListSeat(startDiv, data.listSeat, lengthData, 1, bgColor, textColor, isHorizontal, data);
-  } else if (data.code !== "FEST") {
-    renderListSeat(startDiv, data.listSeat, 1, lengthData, bgColor, textColor, isHorizontal, data);
+  
+  // INI HARDCODE HARUS UBAH
+  if (["SVIP", "VIP"].includes(data.code)) {
+    if (isHorizontal) {
+      renderListSeat(startDiv, data.listSeat, lengthData, 1, bgColor, textColor, isHorizontal, data);
+    } else if (data.code !== "FEST") {
+      renderListSeat(startDiv, data.listSeat, 1, lengthData, bgColor, textColor, isHorizontal, data);
+    }
   }
 }
 
 const splitCode = (seatClass, seatCode) => {
-  if (["DIAMOND PLUS", "FESTIVAL"].includes(seatClass)) {
+  // if (["SUPER VIP", "FESTIVAL"].includes(seatClass)) {
     const code = seatCode.match(/^[^\d]*/)[0];
     const number = parseInt(seatCode.match(/\d+/)[0]);
 
@@ -183,40 +300,40 @@ const splitCode = (seatClass, seatCode) => {
     };
 
     return { seatObject, newCode };
-  } else {
-    const listCode = seatCode.match(/(\D+)(\d+)(\D+\d*)/);
+  // } else {
+  //   const listCode = seatCode.match(/(\D+)(\d+)(\D+\d*)/);
 
-    const codeAndRow = listCode[1];
+  //   const codeAndRow = listCode[1];
 
-    const code = codeAndRow.slice(0, -1);
-    const row = codeAndRow.slice(-1);
+  //   const code = codeAndRow.slice(0, -1);
+  //   const row = codeAndRow.slice(-1);
 
-    const number = parseInt(listCode[2]);
-    const wingAndGt = listCode[3];
+  //   const number = parseInt(listCode[2]);
+  //   const wingAndGt = listCode[3];
 
-    const seatObject = {
-      seat_class: seatClass,
-      seat_code: seatCode,
-      full_code: code + row + wingAndGt,
-      code: code,
-      row: row,
-      number: number,
-      wingAndGt: wingAndGt,
-      wing: wingAndGt.slice(0, 2),
-      gt: wingAndGt.slice(2)
-    }
+  //   const seatObject = {
+  //     seat_class: seatClass,
+  //     seat_code: seatCode,
+  //     full_code: code + row + wingAndGt,
+  //     code: code,
+  //     row: row,
+  //     number: number,
+  //     wingAndGt: wingAndGt,
+  //     wing: wingAndGt.slice(0, 2),
+  //     gt: wingAndGt.slice(2)
+  //   }
 
-    const newCode = {
-      full_code: code + row + wingAndGt,
-      code: code,
-      row: row,
-      wingAndGt: wingAndGt,
-      wing: wingAndGt.slice(0, 2),
-      gt: wingAndGt.slice(2)
-    };
+  //   const newCode = {
+  //     full_code: code + row + wingAndGt,
+  //     code: code,
+  //     row: row,
+  //     wingAndGt: wingAndGt,
+  //     wing: wingAndGt.slice(0, 2),
+  //     gt: wingAndGt.slice(2)
+  //   };
 
-    return { seatObject, newCode }
-  }
+  //   return { seatObject, newCode }
+  // }
 }
 
 function createSeatObjects(seats) {
@@ -241,7 +358,7 @@ function createSeatObjects(seats) {
 }
 
 export const renderSeats = async () => {
-  const fetchSeats = await fetch(`${import.meta.env.VITE_API_URL}/seat-class/51-tahun-kerajaan-cinta-ahmad-dhani`, {
+  const fetchSeats = await fetch(`${import.meta.env.VITE_API_URL}/seat-class/konser-wanita-hebat`, {
     headers: {
       'api-key': import.meta.env.VITE_API_KEY
     }
@@ -274,6 +391,7 @@ export const renderSeats = async () => {
           jsonObj.offsetCol = refObj.offsetCol;
           jsonObj.offsetRow = refObj.offsetRow;
           jsonObj.breakpoint = refObj.breakpoint;
+          jsonObj.breakpoints = refObj.breakpoints;
           jsonObj.code = refObj.code;
         }
       });
@@ -292,5 +410,5 @@ export const renderSeats = async () => {
     boxSection(item, boxId);
   })
 
-  renderFestivalSeat()
+  // renderFestivalSeat()
 }
