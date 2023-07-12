@@ -17,12 +17,12 @@ const colorByCode = (code) => {
       bgColor: 'darkblue',
       textColor: 'white'
     }
-  } else if (code === "PLP") {
+  } else if (code === "CAS") {
     return {
       bgColor: 'antiquewhite',
       textColor: 'black'
     }
-  } else if (code === "PL") {
+  } else if (code === "CBS") {
     return {
       bgColor: 'purple',
       textColor: 'white'
@@ -335,7 +335,7 @@ const boxSection = (data) => {
   const { bgColor, textColor } = colorByCode(data.code);
 
   // INI HARDCODE HARUS UBAH
-  const codeHorizontalView = ["SVIP", "VIP", "PLP", "PL", "GOP", "SIP"];
+  const codeHorizontalView = ["SVIP", "VIP", "CAS", "CBS", "PLP", "PL", "GOP", "SIP"];
 
   const isCodeHorizontal = codeHorizontalView.includes(data.code);
   const GOHorizontal = data.code === "GO" && ["GT9", "GT12"].includes(data.gt);
@@ -346,7 +346,7 @@ const boxSection = (data) => {
   const lengthData = data.listSeat.length;
 
   // INI HARDCODE HARUS UBAH
-  if (["SVIP", "VIP"].includes(data.code)) {
+  if (["SVIP", "VIP", "CAS", "CBS"].includes(data.code)) {
     if (isHorizontal) {
       renderListSeat(boxId, data.listSeat, lengthData, 1, bgColor, textColor, isHorizontal, data);
     } else if (data.code !== "FEST") {
